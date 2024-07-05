@@ -7,7 +7,7 @@ const authenticateUser = async (req, res, next) => {
   if (!token) {
     throw new CustomError.UnauthenticatedError('Authentication Invalid');
   }
- .        
+
   try {
     const { name, userId, role } = isTokenValid({ token });
     req.user = { name, userId, role };
