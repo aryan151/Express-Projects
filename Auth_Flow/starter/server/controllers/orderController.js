@@ -20,7 +20,7 @@ const createOrder = async (req, res) => {
     throw new CustomError.BadRequestError(
       'Please provide tax and shipping fee'
     );
-  }
+  }    
 
   let orderItems = [];
   let subtotal = 0;
